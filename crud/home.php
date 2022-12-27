@@ -15,6 +15,10 @@ require 'setting.php';
 
         <div class="alert alert-info text-center">Data Komponen</div>
 
+        <a href="add.php" class="btn btn-primary float-end">Tambah Komponen</a>
+
+        <br> <br>
+
         <table class="table table-bordered">
             <thead>
                 <tr>
