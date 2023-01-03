@@ -1,6 +1,6 @@
 <?php
 require 'setting.php';
-?>
+?>  
 
 <!DOCTYPE html>
 <html lang="en">

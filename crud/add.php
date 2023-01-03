@@ -1,3 +1,6 @@
+<?php
+require 'setting.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,6 +23,28 @@
 
                 <div class="card card-body">
 
+                    <?php
+
+                    if (isset($_POST['simpan'])) {
+
+                        $merek = $_POST['txtmerek'];
+                        $kapasitas = $_POST['txtkapasitas'];
+                        $harga = $_POST['txtharga'];
+
+                        $query = mysqli_query(
+                            $connect,
+                            "INSERT INTO komponen_015 values(NULL, '$merek', '$kapasitas', '$harga')"
+                        );
+
+                        if ($query) {
+                            header('location: home.php');
+                        } else {
+                            echo 'Error => ' . mysqli_error($connect);
+                        }
+                    }
+
+                    ?>
+
                     <form action="add.php" method="post">
                         <div class="mb-3">
                             <label for="">Merek</label>
@@ -35,6 +60,8 @@
                         </div>
 
                         <input type="submit" name="simpan" value="Simpan" class="btn btn-primary">
+                        <a href="home.php" class="btn btn-warning">Kembali</a>
+
                     </form>
 
                 </div>
