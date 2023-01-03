@@ -46,6 +46,10 @@ require 'setting.php';
                                 class="btn btn-danger btn-sm">Del
                             </a>
 
+                            <a  href="edit.php?kode=<?php echo $isi->id; ?>" 
+                                class="btn btn-warning btn-sm">Edit
+                            </a>
+
                         </td>
                     </tr>
                 <?php
