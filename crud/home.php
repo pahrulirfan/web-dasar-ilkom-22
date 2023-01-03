@@ -1,6 +1,6 @@
 <?php
 require 'setting.php';
-?>  
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,7 +40,13 @@ require 'setting.php';
                         <td><?= $isi->merek; ?></td>
                         <td><?= $isi->kapasitas; ?></td>
                         <td><?= number_format($isi->harga); ?></td>
-                        <td></td>
+                        <td>
+                            <a  onclick="return confirm('Anda Yakin ?')" 
+                                href="delete.php?kode=<?php echo $isi->id; ?>" 
+                                class="btn btn-danger btn-sm">Del
+                            </a>
+
+                        </td>
                     </tr>
                 <?php
                 endwhile;

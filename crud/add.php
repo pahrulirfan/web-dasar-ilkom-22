@@ -42,7 +42,6 @@ require 'setting.php';
                             echo 'Error => ' . mysqli_error($connect);
                         }
                     }
-
                     ?>
 
                     <form action="add.php" method="post">
